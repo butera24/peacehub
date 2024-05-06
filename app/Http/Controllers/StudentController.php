@@ -27,7 +27,7 @@ class StudentController extends Controller
             //'age' => 'integer|nullable',
             'gender' => 'required|string',
             'password' => 'required',
-            'email' => 'required|regex:/@std\.mubs\.ug$/i|unique:students',
+            'email' => 'required|regex:/@mubs\.ac\.ug$/i|unique:students',
             'university_id' => 'required|string|unique:students',
             'major' => 'required|string',
             'year' => 'required|string',

@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+use App\Models\Comment;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -12,9 +15,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        $student = Auth::guard('student')->user();
-        $posts = Post::where('student_id', $student)->get();
-        return view('students.blog', compact('posts'));
+        
+        $posts = Post::where('student_id', Auth::guard('student')->user()->id)->get();
+        return view('myposts', compact('posts'));
     }
 
     /**
@@ -39,8 +42,7 @@ class PostController extends Controller
         $post = new Post();
         $post->title = $validatedData['title'];
         $post->content = $validatedData['content'];
-        // Assuming you have a relationship with the authenticated student
-        $post->student_id = auth()->guard('student')->id(); // or however you retrieve the authenticated student ID
+        $post->student_id = auth()->guard('student')->id(); 
     
         // Save the post to the database
         $post->save();
@@ -55,7 +57,9 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        $comments = Comment::where('post_id', $post->id)->get();
+        //dd($comments);
+        return view('commentview', compact('post','comments'));
     }
 
     /**
