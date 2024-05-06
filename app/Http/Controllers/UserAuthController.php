@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -23,7 +24,9 @@ class UserAuthController extends Controller
         return view('services');
     }
     public function blog(){
-        return view('students.blog');
+        $posts = Post::all();
+        $user = Auth::guard('student')->user();
+        return view('students.blog',compact('posts','user'));
     }
 
     public function loginpage(){
@@ -41,7 +44,6 @@ class UserAuthController extends Controller
         
         if (Auth::guard('student')->attempt($credentials)) {
             $user = Auth::guard('student')->user();
-            //dd($user); // Check if the user is retrieved successfully
             return redirect()->route('welcome');
         } else {
             toastr()->error('Login Failed');
