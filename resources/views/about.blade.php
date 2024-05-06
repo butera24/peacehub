@@ -145,17 +145,17 @@
         <div class="card">
             <div class="team-card">
                 <img src="{{asset('images/kelly.jpg')}}" alt="">
-                <h3>Dr Kelly T</h3>
+                <h3>Ema Babikwa</h3>
                 <p>Licensed Cousellor</p>
             </div>
             <div class="team-card">
                 <img src="{{ asset('images/ketra.jpg') }}" alt="">
-                <h3>Dr Shatrah M</h3>
+                <h3>Tashy Tash</h3>
                 <p>Licensed Mentor</p>
             </div>
             <div class="team-card">
                 <img src="{{ asset('images/vicent.jpg') }}" alt="">
-                <h3>Dr Vincent P</h3>
+                <h3>Jed Mugarura</h3>
                 <p>Licensed Counsellor</p>
             </div>
         </div>
