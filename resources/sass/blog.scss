@@ -1,0 +1,276 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    border: 2px solid black;
+    border-radius: 15px;
+    font-family: "Inter", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
+    min-height: 100vh;
+
+    color: white;
+    font-size: 16px;
+    font-weight: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        color: rgb(85, 82, 82);
+    }
+
+    section {
+        width: 90vw;
+        // border: 1px solid red;
+        margin-bottom: 40px;
+    }
+
+    .section-1 {
+        position: relative;
+        height: 45vh;
+        border-radius: 15px;
+        align-items: stretch;
+        background-color: #3973E1;
+    
+        header {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 20%;
+    
+            .logo {
+                font-weight: bold;
+                font-size: 24px;
+    
+                &:hover {
+                    svg {
+                        transition: all ease 0.3s;
+                        fill: white;
+                    }
+                }
+            }
+    
+            nav ul li {
+                display: inline;
+                margin-right: 40px;
+            }
+    
+            a {
+                text-decoration: none;
+                color: white;
+                font-weight: 300;
+    
+                &:hover {
+                    transition: all ease 0.6s;
+                    color: black;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            }
+    
+            .signin-btn {
+                width: 10%;
+                padding: 4px;
+                color: white;
+                background-color: transparent;
+                font-size: 16px;
+    
+                border: {
+                    width: 1px;
+                    style: solid;
+                    color: white;
+                    radius: 20px;
+                }
+    
+                &:hover {
+                    transition: all ease 0.2s;
+                    background-color: #3973E1;
+                    color: white;
+                    border: 2px solid white;
+                    font-size: 18px;
+                }
+    
+            }
+        }
+    
+        .text {
+            width: 100%;
+            text-align: center;
+            font-size: 60px;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+        }
+    
+    
+    }
+
+    .blog {
+        width: 95vw;
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            .blog-card {
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                 // Adjusted to fit the width
+    
+                .header {
+                    display: flex;
+                    align-items: center;
+    
+                    .avatar {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        margin-right: 15px;
+                        border: 1px solid black;
+    
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+    
+                    .user-details {
+                        flex-grow: 1;
+    
+                        .username {
+                            margin: 0;
+                            font-size: 18px;
+                            color: #333;
+                        }
+    
+                        .date {
+                            color: #666;
+                            font-size: 14px;
+                        }
+                    }
+                }
+    
+                .content {
+                    margin-top: 15px;
+    
+                    .description {
+                        margin: 0;
+                        color: #666;
+                        line-height: 1.6;
+                        text-align: justify;
+                    }
+                }
+    
+                .actions {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 20px;
+    
+                    .icon {
+                        display: flex;
+                        align-items: center;
+                        color: #666;
+    
+                        i {
+                            margin-right: 5px;
+                        }
+    
+                        .count {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
+
+    footer {
+        margin-bottom: 20px;
+        background-color: black;
+        width: 90vw;
+        height: 35vh;
+        border-radius: 15px;
+        padding: 20px;
+    
+        .footer-row {
+            display: flex;
+            flex-grow: 1;
+            color: rgb(124, 121, 121);
+            height: 100%;
+    
+            .foot-col {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                justify-content: space-between;
+    
+    
+                a {
+                    text-decoration: none;
+                    margin-top: 20px;
+                    margin-left: 120px;
+                    color: rgb(124, 121, 121);
+    
+                }
+    
+    
+                &.foot-1 {
+                    width: 40%;
+    
+                    h1 {
+                        color: white;
+                    }
+    
+                    input {
+                        background-color: black;
+                        border-radius: 20px;
+                        color: white;
+                        font-size: 19px;
+                        border: 1px solid white;
+                        padding: 8px;
+                    }
+    
+                    input::placeholder {
+                        font-size: 14px;
+                        padding: 20px;
+                    }
+                }
+    
+                &.foot-2 {
+                    width: 30%;
+    
+                    p {
+                        margin-left: 100px;
+                    }
+                }
+    
+                &.foot-3 {
+                    width: 15%;
+                }
+    
+                &.foot-4 {
+                    width: 15%;
+                    position: relative;
+    
+                    
+                }
+            }
+        }
+    }
+
+}
