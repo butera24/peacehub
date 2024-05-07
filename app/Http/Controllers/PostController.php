@@ -58,7 +58,7 @@ class PostController extends Controller
     public function show(Post $post)
     {
         $comments = Comment::where('post_id', $post->id)->get();
-        //dd($comments);
+    
         return view('commentview', compact('post','comments'));
     }
 

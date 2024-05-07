@@ -17,14 +17,14 @@
 <body>
     <section class="section-1">
         <header id="header">
-            <div class="logo" style="cursor: pointer;">PEACE
+        <a href="{{route('welcome')}}" class="logo" style="cursor: pointer;">PEACE
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20"
                     fill="white">
                     <path
                         d="M288 167.2v-28.1c-28.2-36.3-47.1-79.3-54.1-125.2-2.1-13.5-19-18.8-27.8-8.3-21.1 24.9-37.7 54.1-48.9 86.5 34.2 38.3 80 64.6 130.8 75.1zM400 64c-44.2 0-80 35.9-80 80.1v59.4C215.6 197.3 127 133 87 41.8c-5.5-12.5-23.2-13.2-29-.9C41.4 76 32 115.2 32 156.6c0 70.8 34.1 136.9 85.1 185.9 13.2 12.7 26.1 23.2 38.9 32.8l-143.9 36C1.4 414-3.4 426.4 2.6 435.7 20 462.6 63 508.2 155.8 512c8 .3 16-2.6 22.1-7.9l65.2-56.1H320c88.4 0 160-71.5 160-159.9V128l32-64H400zm0 96.1c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16z" />
                 </svg>
                 HUB
-            </div>
+            </a>
 
 
             <nav>
@@ -68,7 +68,7 @@
                     <h3>Depression</h3>
                 </div>
                 <div class="buttons">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nihil omnis ab accusan</p>
+                    <p>Depression is a mental health disorder characterized by persistent feelings of sadness, hopelessness, and a loss of interest in activities that one used to enjoy. It can affect how you think, feel, and handle daily activities.</p>
                     
                 </div>
             </div>
@@ -78,7 +78,7 @@
                     <h3>Anxiety</h3>
                 </div>
                 <div class="buttons">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nihil omnis ab accusan</p>
+                    <p>Anxiety is a natural response to stress or a perceived threat, but when it becomes excessive or persistent, it can develop into an anxiety disorder.</p>
                     
                 </div>
             </div>
@@ -95,7 +95,7 @@
                     <h3>Relationship Issues</h3>
                 </div>
                 <div class="buttons">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nihil omnis ab accusan</p>
+                    <p>Relationship issues can encompass a wide range of challenges that arise between individuals in personal, professional,family or social connections.</p>
                     
                 </div>
             </div>
@@ -105,7 +105,7 @@
                     <h3>Grief</h3>
                 </div>
                 <div class="buttons">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nihil omnis ab accusan</p>
+                    <p>Grief is a complex emotional response to loss. It can manifest in many ways including sadness,  physiological distress, separation anxiety, confusion, anger and even physical symptoms.</p>
                     
                 </div>
             </div>
@@ -119,10 +119,10 @@
             <div class="card">
                 <div class="card-content confidence">
                     <p>Personal Issues</p>
-                    <h3>Self Cnfidence</h3>
+                    <h3>Self Confidence</h3>
                 </div>
                 <div class="buttons">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nihil omnis ab accusan</p>
+                    <p>Self-confidence is the belief in one's abilities, worth and potential. It's a crucial aspect of mental and emotional well-being that allows individuals to navigate life with a sense of assurance and resilience.</p>
                     
                 </div>
             </div>
@@ -132,7 +132,7 @@
                     <h3>Stress Management</h3>
                 </div>
                 <div class="buttons">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nihil omnis ab accusan</p>
+                    <p>Stress management involves adopting strategies to cope with and reduce the negative effects of stress on physical and mental well-being.</p>
                     
                 </div>
             </div>
@@ -149,7 +149,7 @@
                     <h3>Eating Disorder</h3>
                 </div>
                 <div class="buttons">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nihil omnis ab accusan</p>
+                    <p>Eating disorders are serious mental health conditions characterized by disturbances in eating behaviors and distorted body image.</p>
                     
                 </div>
             </div>
@@ -159,7 +159,7 @@
                     <h3>Substance Abuse</h3>
                 </div>
                 <div class="buttons">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nihil omnis ab accusan</p>
+                    <p>Substance abuse refers to the harmful or hazardous use of psychoactive substances, including alcohol and drugs.</p>
                     
                 </div>
             </div>
