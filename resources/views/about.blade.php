@@ -29,26 +29,34 @@
                 <ul>
                     <li><a href="{{ route('about') }}">About</a></li>
                     <li><a href="{{ route('services') }}">Services</a></li>
+
                     @auth('student')
-                        <li><a href="{{ route('blog') }}">Blog</a></li>
+                        <li class="dropdown">
+                            <a class="nav-item dropdown-toggle" href="{{ route('blog') }}" id="navbarDropdownMenuLink" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Blog
+                            </a>
+                            
+                        </li>
                     @endauth
-                    <li><a href="">Contact</a></li>
+
                 </ul>
             </nav>
+
             @auth('student')
-            <li class="nav-item d-none d-sm-inline-block">
-                <a class="nav-link" href=""
-                    onclick="event.preventDefault();
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a class="nav-link" href=""
+                        onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
-                    <i class="fas fa-power-off" style="color: red"></i>
-                    {{ __('Logout') }}
-                </a>
-                <form id="logout-form" action="{{ route('user logout') }}" method="POST" class="d-none">
-                    @csrf
-                </form>
-            </li>
+                        <i class="fas fa-door" style=""></i>
+                        {{ __('Logout') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('user logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </li>
             @else
-            <a href="{{ route('loginpage') }}" id="loginBtn" class="signin-btn" style="text-align: center;">Sign In</a>
+                <a href="{{ route('loginpage') }}" id="loginBtn" class="signin-btn">Sign In</a>
             @endauth
 
         </header>
