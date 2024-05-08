@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post Details</title>
+    @vite(['resources/css/app.css',
+    'resources/js/app.js',])
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -57,12 +59,31 @@
 <body>
     <div class="container">
         <h1>Post Details</h1>
-        <div class="post-details">
-            <p><span>Title:</span> {{ $post->title }}</p>
-            <p><span>Author:</span> {{ $post->student->username }}</p>
-            <p><span>Date:</span> {{ $post->created_at }}</p>
-            <p><span>Content:</span> {{ $post->content }}</p>
-        </div>
+        <form action="{{ route('post.update', $post->id) }}" method="POST">
+            @csrf
+            @method('PUT')
+            <div class="post-details">
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" class="form-control" id="title" name="title" value="{{ $post->title }}">
+                </div>
+                <div class="form-group">
+                    <label>Author:</label>
+                    <p>{{ $post->student->username }}</p>
+                </div>
+                <div class="form-group">
+                    <label>Date:</label>
+                    <p>{{ $post->created_at }}</p>
+                </div>
+                <div class="form-group">
+                    <label for="content">Content:</label>
+                    <textarea class="form-control" id="content" name="content" rows="5">{{ $post->content }}</textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+        
+        
         
         <div class="comment-section">
             <h2>Comments</h2>

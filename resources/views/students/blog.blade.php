@@ -45,6 +45,8 @@
                                 <a class="dropdown-item" id=""
                                     href="{{ route('post.index') }}"style="color: black">My
                                     Posts</a>
+                                <a class="dropdown-item" id=""
+                                    href=""style="color: black">Counsellors</a>
                             </div>
                         </li>
                     @endauth
@@ -70,6 +72,7 @@
 
         </header>
 
+
         <div class="text">PeaceHub <br>Blog <br>
 
         </div>
@@ -91,7 +94,9 @@
                         </div>
                     </div>
                     <div class="content">
-                        <a href="{{ route('post.show',$post->id) }}"><h4 class="title">{{ $post->title }}.</h4></a>
+                        <a href="{{ route('post.show', $post->id) }}">
+                            <h4 class="title">{{ $post->title }}.</h4>
+                        </a>
                         <p class="description">{{ $post->content }}.</p>
                     </div>
                     <div class="actions">
@@ -104,6 +109,12 @@
                             <i class="fas fa-comment"></i>
                             <span class="count">{{ $post->comments()->count() }}
                             </span>
+                            {{-- <a href="" class="icon edit" style="color: green">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a href="" class="icon delete" style="color: red">
+                                <i class="fas fa-trash-alt"></i>
+                            </a> --}}
                         </a>
                     </div>
                 </div>
@@ -229,7 +240,7 @@
                         <!-- Add any additional form fields as needed -->
                     </form>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -260,10 +271,10 @@
 
     <script>
         $('#commentModal').on('show.bs.modal', function(event) {
-            var button = $(event.relatedTarget); 
-            var postId = button.data('post-id'); 
+            var button = $(event.relatedTarget);
+            var postId = button.data('post-id');
             var modal = $(this);
-            modal.find('#post_id').val(postId); 
+            modal.find('#post_id').val(postId);
         });
     </script>
 

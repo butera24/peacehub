@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -34,7 +33,7 @@
                     @auth('student')
                         <li><a href="{{ route('blog') }}">Blog</a></li>
                     @endauth
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="">Contact</a></li>
                 </ul>
             </nav>
             @auth('student')

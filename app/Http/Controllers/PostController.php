@@ -15,7 +15,6 @@ class PostController extends Controller
      */
     public function index()
     {
-        
         $posts = Post::where('student_id', Auth::guard('student')->user()->id)->get();
         return view('myposts', compact('posts'));
     }
@@ -75,7 +74,17 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $request->validate([
+            'title' => 'string|max:255',
+            'content' => 'string',
+        ]);
+    
+        $post->title = $request->input('title');
+        $post->content = $request->input('content');
+    
+        $post->save();
+        toastr()->success('Post Updated');
+        return redirect()->route('post.index');
     }
 
     /**
@@ -83,6 +92,9 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+
+        $post -> delete();
+        toastr()->success('Post Deleted');
+        return redirect()->back();
     }
 }

@@ -45,6 +45,8 @@
                                 <a class="dropdown-item" id=""
                                     href="{{ route('post.index') }}"style="color: black">My
                                     Posts</a>
+                                <a class="dropdown-item" id=""
+                                    href=""style="color: black">Counsellors</a>
                             </div>
                         </li>
                     @endauth
@@ -69,6 +71,8 @@
             @endauth
 
         </header>
+
+
 
         <div class="text">PeaceHub <br>Blog <br>
 
@@ -105,6 +109,14 @@
                             <span class="count">{{ $post->comments()->count() }}
                             </span>
                         </a>
+                        {{-- <a href="{{ route('post.show', $post->id) }}" class="icon edit" style="color: green">
+                            <i class="fas fa-edit"></i>
+                        </a> --}}
+                        <form action="{{ route('post.destroy', $post->id) }}" class="icon delete" method="POST">
+                            @method('DELETE')
+                            @csrf
+                            <button type="submit" style="background-color: transparent;border-style:none"><i class="fas fa-trash-alt"  style="color: red"></i></button>
+                        </form>
                     </div>
                 </div>
             </div>
